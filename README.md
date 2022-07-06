@@ -15,6 +15,7 @@ Technology used in this app :
 
 behance :
 https://www.behance.net/gallery/147600841/Islamic-App-%28Muslim%29?
+App link : https://l.messenger.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F182Gm9CQrU-5PZlsejASupgrG23rBQlTq%2Fview%3Fusp%3Ddrivesdk&h=AT0AXMe864EGjnkzRSPYHlvqm-zxYZPA1eurrniKZzbbonNHUvnAHQ5VSZUukfiKhgV-oxGoVEzleRNZ3_6LkayfsdAZbVkJ4gMW6H8h2yibjEeLm6nbv7rCy_RSa0KjQyN7vw
 
 images:
 
