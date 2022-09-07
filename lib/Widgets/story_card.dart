@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:muslim_app/Screens/ayaa.dart';
 import 'package:muslim_app/Screens/story_details.dart';
 
 class StoryCard extends StatelessWidget {
@@ -44,9 +43,9 @@ class StoryCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.centerRight,
                         end: Alignment.centerLeft,
                         colors: [

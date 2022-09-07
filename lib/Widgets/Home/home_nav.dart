@@ -19,7 +19,7 @@ class HomeNav extends StatelessWidget {
               icon: const Icon(Icons.settings)),
           const Text(
             'مُسلِم',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 30, fontFamily: 'Arabic'),
           ),
         ],
       ),

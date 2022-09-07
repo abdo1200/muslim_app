@@ -48,7 +48,7 @@ class Azkar extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              Sabah(name: 'أذكار الصباح و المساء')));
+                              const Sabah(name: 'أذكار الصباح و المساء')));
                 },
                 child: Container(
                   padding:

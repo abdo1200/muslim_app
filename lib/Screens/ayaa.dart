@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:muslim_app/Providers/api_provider.dart';
-import 'package:quran/quran.dart' as quran;
 
 class Ayaa extends StatelessWidget {
   final int num;
@@ -62,7 +60,7 @@ class Ayaa extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 20),
                             decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 67, 67, 67),
+                                color: const Color.fromARGB(255, 67, 67, 67),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -80,9 +78,9 @@ class Ayaa extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 color: Colors.white,

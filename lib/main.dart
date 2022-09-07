@@ -5,6 +5,9 @@ import 'package:muslim_app/Screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  //NotificationService().initNotification();
+
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => ApiProvider()),

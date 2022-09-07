@@ -61,7 +61,7 @@ class Sabah extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 20),
                             decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 67, 67, 67),
+                                color: const Color.fromARGB(255, 67, 67, 67),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -74,22 +74,22 @@ class Sabah extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           for (int i = 0; i < list!.length; i++)
                             Column(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Text(list[i]['ARABIC_TEXT'],
                                       textAlign: TextAlign.end,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20, fontFamily: 'Arabic')),
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 10),
                               ],
                             ),
                         ],
@@ -98,9 +98,9 @@ class Sabah extends StatelessWidget {
                   ),
                 );
               } else {
-                return Container(
+                return SizedBox(
                     height: height,
-                    child: Center(child: const CircularProgressIndicator()));
+                    child: const Center(child: CircularProgressIndicator()));
               }
             }),
       ),

@@ -1,15 +1,12 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
-import 'package:mailer/mailer.dart';
-import 'package:mailer/smtp_server.dart';
 import 'package:muslim_app/sqldb.dart';
 import 'package:share_plus/share_plus.dart';
 
 class Setting extends StatelessWidget {
   Setting({Key? key}) : super(key: key);
   final TextEditingController feed = TextEditingController();
-
-  SqlDb sqlDb = SqlDb();
+  final SqlDb sqlDb = SqlDb();
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -51,22 +48,22 @@ class Setting extends StatelessWidget {
               SizedBox(
                 height: height * .2,
               ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Icon(Icons.language),
-                    Text('لغة التطبيق',
-                        style: TextStyle(fontSize: 25, fontFamily: 'Arabic')),
-                  ],
-                ),
-              ),
-              SizedBox(
+              // Container(
+              //   padding:
+              //       const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              //   decoration: BoxDecoration(
+              //       color: Colors.white,
+              //       borderRadius: BorderRadius.circular(20)),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: const [
+              //       Icon(Icons.language),
+              //       Text('لغة التطبيق',
+              //           style: TextStyle(fontSize: 25, fontFamily: 'Arabic')),
+              //     ],
+              //   ),
+              // ),
+              const SizedBox(
                 height: 20,
               ),
               GestureDetector(
@@ -90,23 +87,28 @@ class Setting extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 14, 72, 121),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text('تواصل معنا',
-                    textAlign: TextAlign.end,
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontFamily: 'Arabic',
-                      color: Colors.white,
-                    )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 14, 72, 121),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: const Text('تواصل معنا',
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontFamily: 'Arabic',
+                          color: Colors.white,
+                        )),
+                  ),
+                ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -115,7 +117,8 @@ class Setting extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20)),
                 child: TextFormField(
                   textDirection: TextDirection.rtl,
-                  decoration: InputDecoration(
+                  maxLines: 5,
+                  decoration: const InputDecoration(
                     hintTextDirection: TextDirection.rtl,
                     contentPadding: EdgeInsets.all(15),
                     hintStyle: TextStyle(fontSize: 25, fontFamily: 'Arabic'),
@@ -125,7 +128,7 @@ class Setting extends StatelessWidget {
                   controller: feed,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -147,8 +150,6 @@ class Setting extends StatelessWidget {
 
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       } else {
-                        int response = await sqlDb
-                            .insertData('Contact', {'note': feed.text});
                         var snackBar = SnackBar(
                           elevation: 0,
                           behavior: SnackBarBehavior.floating,
@@ -164,11 +165,11 @@ class Setting extends StatelessWidget {
                       }
                     },
                     child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 14, 72, 121),
+                          color: const Color.fromARGB(255, 14, 72, 121),
                           borderRadius: BorderRadius.circular(20)),
-                      child: Text('إرسال',
+                      child: const Text('إرسال',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: 'Arabic',

@@ -34,7 +34,7 @@ class ApiProvider extends ChangeNotifier {
   String sum(List sura, int num) {
     String sum = '';
     for (int i = 0; i < sura.length; i++) {
-      sum = sum + quran.getVerse(num + 1, i + 1, verseEndSymbol: true) + ' ';
+      sum = '$sum${quran.getVerse(num + 1, i + 1, verseEndSymbol: true)} ';
     }
     return sum;
   }

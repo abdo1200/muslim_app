@@ -63,9 +63,9 @@ class Verses extends StatelessWidget {
                   ),
                 );
               } else {
-                return Container(
+                return SizedBox(
                     height: height,
-                    child: Center(child: const CircularProgressIndicator()));
+                    child: const Center(child: CircularProgressIndicator()));
               }
             }),
       ),

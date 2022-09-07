@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:muslim_app/Screens/ayaa.dart';
 import 'package:muslim_app/Screens/azkar_details.dart';
 
 class AzkarCard extends StatelessWidget {

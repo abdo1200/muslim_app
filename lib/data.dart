@@ -36,6 +36,17 @@ List islamStories = [
     'image': 'assets/images/mosa.jpg',
   },
 ];
+List tasbeh = [
+  {'title': 'سبحان الله'},
+  {'title': 'الحمدلله'},
+  {'title': 'لا إله إلا الله'},
+  {'title': 'الله أكبر'},
+  {'title': 'أستغفر الله العظيم'},
+  {'title': 'اللهم صلي علي محمد'},
+  {'title': 'سبحان الله وبحمده'},
+  {'title': 'سبحان الله العظيم'},
+  {'title': 'لا حول ولا قوة إلا بالله'},
+];
 
 List azkar = [
   {

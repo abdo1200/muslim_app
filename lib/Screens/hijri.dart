@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_app/Model/prayertime.dart';
 import 'package:muslim_app/Providers/api_provider.dart';
-import 'package:muslim_app/Providers/provider.dart';
-import 'package:muslim_app/Widgets/pray_time_card.dart';
 import 'package:provider/provider.dart';
 
-class hijri extends StatelessWidget {
-  const hijri({Key? key}) : super(key: key);
+class HijriDate extends StatelessWidget {
+  const HijriDate({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var api = Provider.of<ApiProvider>(context);
-    var custom = Provider.of<CustomProvider>(context);
     return Scaffold(
       body: FutureBuilder<Data>(
           future: api.getApiData(),
@@ -57,7 +54,7 @@ class hijri extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 10, horizontal: 20),
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 67, 67, 67),
+                            color: const Color.fromARGB(255, 67, 67, 67),
                             borderRadius: BorderRadius.circular(20)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -89,7 +86,7 @@ class hijri extends StatelessWidget {
                       ),
                       const SizedBox(height: 40),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -99,9 +96,9 @@ class hijri extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(date.date,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 25, fontFamily: 'Arabic')),
-                              Text(' : التاريخ',
+                              const Text(' : التاريخ',
                                   style: TextStyle(
                                       fontSize: 20, fontFamily: 'Arabic')),
                             ],
@@ -135,9 +132,9 @@ class hijri extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(date.month.ar,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 25, fontFamily: 'Arabic')),
-                              Text(' : الشهر',
+                              const Text(' : الشهر',
                                   style: TextStyle(
                                       fontSize: 20, fontFamily: 'Arabic')),
                             ],

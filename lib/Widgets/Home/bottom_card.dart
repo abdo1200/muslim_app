@@ -17,45 +17,47 @@ class BottomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
         ontap();
       },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        elevation: 2,
         child: Container(
           alignment: Alignment.center,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerRight,
-              end: Alignment.centerLeft,
-              colors: [
-                color1,
-                color2,
-              ],
-            ),
-            borderRadius: BorderRadius.circular(10),
-            image: const DecorationImage(
-                image: AssetImage(
-                  'assets/images/pattern.png',
-                ),
-                repeat: ImageRepeat.repeat,
-                opacity: .2),
-          ),
-          child: Column(
+          width: width * .47,
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const SizedBox(height: 10),
-              Image.asset(img, height: width * .15),
+              Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.centerRight,
+                      end: Alignment.centerLeft,
+                      colors: [
+                        color1,
+                        color2,
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                    image: const DecorationImage(
+                        image: AssetImage(
+                          'assets/images/pattern.png',
+                        ),
+                        repeat: ImageRepeat.repeat,
+                        opacity: .2),
+                  ),
+                  child: Image.asset(img, height: width * .10)),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                padding: const EdgeInsets.all(5),
                 child: Text(
                   title,
                   style:
-                      TextStyle(fontSize: width * .045, fontFamily: 'Arabic'),
+                      TextStyle(fontSize: width * .044, fontFamily: 'Arabic'),
                 ),
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:sqflite/sqflite.dart';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
 
 class SqlDb {
@@ -20,14 +21,14 @@ class SqlDb {
     return mydb;
   }
 
-  _onUpgrade(Database db, int oldversion, int newversion) {
-    print('upgrade');
-  }
+  // _onUpgrade(Database db, int oldversion, int newversion) {
+  //   print('upgrade');
+  // }
 
   _onCreate(Database db, int version) async {
     await db.execute(
         'CREATE TABLE Contact ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "note" TEXT NOT NULL )');
-    print('done');
+    // print('done');
   }
 
   readData(String table) async {

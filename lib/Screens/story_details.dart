@@ -52,7 +52,7 @@ class StoryDetails extends StatelessWidget {
               ],
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               margin: EdgeInsets.only(top: height * .3),
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -64,9 +64,9 @@ class StoryDetails extends StatelessWidget {
               child:
                   Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
                 Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.centerRight,
                         end: Alignment.centerLeft,
                         colors: [
@@ -84,7 +84,7 @@ class StoryDetails extends StatelessWidget {
                     textAlign: TextAlign.end,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(

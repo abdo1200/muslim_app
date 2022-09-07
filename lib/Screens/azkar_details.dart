@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_app/data.dart';
-import 'package:muslim_app/Providers/api_provider.dart';
-import 'package:provider/provider.dart';
 
 class AzkarDetails extends StatelessWidget {
   final String name;
@@ -12,7 +10,6 @@ class AzkarDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var api = Provider.of<ApiProvider>(context);
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
@@ -55,7 +52,7 @@ class AzkarDetails extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 67, 67, 67),
+                      color: const Color.fromARGB(255, 67, 67, 67),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -68,22 +65,22 @@ class AzkarDetails extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 for (int i = 0; i < azkar[0][name].length; i++)
                   Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
                         child: Text(azkar[0][name][i]['ARABIC_TEXT'],
                             textAlign: TextAlign.end,
-                            style:
-                                TextStyle(fontSize: 20, fontFamily: 'Arabic')),
+                            style: const TextStyle(
+                                fontSize: 20, fontFamily: 'Arabic')),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                     ],
                   ),
               ],
